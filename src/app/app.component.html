@@ -1,5 +1,38 @@
-<div class="grid h-screen place-items-center">
-  <div class="font-bold text-3xl">
-    Fyle Internship Challenge
+<div class="main ">
+  <div class="head">
+    <img src="" class="pic" />
+    <div class="head-content">
+      <p class="head-content_john">John Doe</p>
+      <p class="head-content_bio">bio goes here</p>
+      <p class="head-content_location"><img
+          src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_location_on_48px-256.png"
+          class="head-content_pic" />Oriando</p>
+      <p class="head-content_twitter">Twitter:http://twitter.com/john_doe</p>
+    </div>
   </div>
+  <p class="head-content_git"><img
+      src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_link_48px-64.png"
+      class="twitterpic" />http://github.com_doe</p>
+  <div class="main_card">
+    <ng-container *ngFor="let item of data">
+      <app-angular-card [title]="item.title" 
+                        [subtitle]="item.description" 
+                        [content]="'Some content for card.'" 
+                        [tag]="item.tags"
+                        class="respo-card">
+      </app-angular-card>
+    </ng-container>
+
+  </div>
+
+
+  <div class="pagination">
+    <div *ngFor="let item of data | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }">
+      <!-- Your item template -->
+    </div>
+
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+  </div>
+
+
 </div>

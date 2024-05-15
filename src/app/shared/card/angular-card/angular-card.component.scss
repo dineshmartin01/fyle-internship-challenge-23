@@ -1,0 +1,25 @@
+.card_tag{
+    display: flex;
+    gap: 6px;
+}
+
+.tag {
+    height: 25px;
+    max-width: fit-content;   
+    padding: 5px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: rgb(71, 158, 229);
+    font-weight: bolder;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.card-title{
+    font-size: 30px;
+    color:rgb(71, 158, 229) ;
+}
+.card{
+    padding-left: 15px;
+}
